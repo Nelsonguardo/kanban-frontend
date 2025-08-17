@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import { API_URL, getToken } from "../../utils/Global";
+import { API_URL, getToken, getUserId } from "../../utils/Global";
 
 function Dashboard() {
   const username = Cookies.get("username") || "Usuario";
@@ -13,7 +13,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchBoards = async () => {
       try {
-        const response = await fetch(`${API_URL}/board/${userId}/users`, {
+        const response = await fetch(`${API_URL}/board/${getUserId()}/users`, {
           headers: {
             Authorization: `Bearer ${getToken()}`,
           },

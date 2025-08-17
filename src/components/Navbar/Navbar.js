@@ -34,9 +34,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/perfil"
+              to="/profile"
               className="flex items-center gap-2 hover:text-blue-200 transition-colors"
-              title="Perfil"
+              title="Profile"
             >
               <FaUser /> <span>Perfil</span>
             </Link>

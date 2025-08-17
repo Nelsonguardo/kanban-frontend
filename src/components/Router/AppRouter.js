@@ -3,6 +3,7 @@ import Login from "../User/Login";
 import Register from "../User/Register";
 import Dashboard from "../Dashboard/Dashboard";
 import ProtectedRoute from "../../utils/ProtectedRoute";
+import Profile from "../Profile/Profile";
 
 function AppRouter() {
     return (
@@ -12,6 +13,11 @@ function AppRouter() {
             <Route path="/dashboard" element={
                 <ProtectedRoute>
                     <Dashboard />
+                </ProtectedRoute>
+            } />
+            <Route path="/profile" element={
+                <ProtectedRoute>
+                    <Profile />
                 </ProtectedRoute>
             } />
             <Route path="/register" element={<Register />} />
