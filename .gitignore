@@ -26,4 +26,4 @@ yarn-error.log*
 .env
 
 # bat file
-start-kanban.bat
+#start-kanban.bat
